@@ -1,0 +1,97 @@
+.nav-underline {
+    position: relative;
+    text-decoration: none;
+}
+  
+.nav-underline::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px; 
+    border-radius: 10px;
+    background-color: #FAC679;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 100%;
+    transition: transform 0.5s;
+}
+  
+.nav-underline:hover::before {
+    transform: scaleX(1);
+}
+
+.navbar{
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.navbar-scrolled{
+    background-color: #19181397;
+}
+
+.catalog-image-size{
+    width: 300px;
+    height: 411.058px;
+}
+
+.hover-cart {
+    display: none;
+}
+
+.catalog_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cart-wrapper {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cart-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.catalog_1:hover .hover-cart {
+    display: block;
+    transition-duration: 0.5s;
+    animation-delay: 1s;
+    padding: 50px;
+    background-color: #372d1d81;
+}
+
+.catalog_2:hover .hover-cart{
+    display: block;
+    transition-duration: 0.5s;
+}
+
+@media screen and (max-width:700px){
+    body{
+        overflow-y: scroll;
+        overflow-x: scroll;
+    }
+    .about-text{
+        padding-top: -100px;
+    }
+    .homepage-about{
+    }
+    .disable-in-mobil{
+        display: none;
+        margin: 0%;
+    }
+}
